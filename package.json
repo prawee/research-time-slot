@@ -1,0 +1,14 @@
+{
+  "name": "research-time-slot",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "slot-calculator": "^2.2.0"
+  },
+  "repository": "https://github.com/prawee/research-time-slot.git",
+  "author": "Prawee Wongsa <prawee@hotmail.com>",
+  "license": "MIT"
+}
