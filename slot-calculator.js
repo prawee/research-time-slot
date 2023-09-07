@@ -1,9 +1,17 @@
 const { DateTime, Settings } = require('luxon')
 const { getSlots } = require('slot-calculator')
 
-// Settings.defaultZone = 'UTC'
-const dateTimeRef = DateTime.local(2023, 9, 6, 8).setZone('Asia/Bangkok')
+Settings.defaultZone = 'UTC'
+// const dateTimeRef = DateTime.local(2023, 9, 7, 8).setZone('Asia/Bangkok')
 // const dateTimeRef = DateTime.now().setZone('Asia/Bangkok')
+const dateTimeRef = DateTime.local(2023, 9, 7, 8)
+
+const { allSlots, allDates, availableSlots, availableDates, allSlotsByDay, availableSlotsByDay, timeTaken } = getSlots({
+    from: dateTimeRef.toISO(),
+    to: dateTimeRef.plus({ days: 1 }).toISO(),
+    // outputTimezone: "Asia/Bangkok",
+    duration: 60,
+});
 
 // const { allSlots } = getSlots({
 //     from: dateTimeRef.toISO(),
@@ -39,7 +47,6 @@ const dateTimeRef = DateTime.local(2023, 9, 6, 8).setZone('Asia/Bangkok')
 //     duration: 60,
 // });
 
-
 // const { allSlots } = getSlots({
 //     from: '2023-09-06T08:00:00',
 //     to: '2023-09-06T17:00:00',
@@ -47,11 +54,17 @@ const dateTimeRef = DateTime.local(2023, 9, 6, 8).setZone('Asia/Bangkok')
 //     duration: 180,
 // });
 
-const { allSlots } = getSlots({
-    from: dateTimeRef.toISO(),
-    to: dateTimeRef.plus({ hour: 2 }).toISO(),
-    outputTimezone: "Asia/Bangkok",
-    duration: 30,
-});
+// const { allSlots } = getSlots({
+//     from: dateTimeRef.toISO(),
+//     to: dateTimeRef.plus({ hour: 2 }).toISO(),
+//     outputTimezone: "Asia/Bangkok",
+//     duration: 30,
+// });
 
-console.log('allSlots ', allSlots)
+// console.log('allSlots ', allSlots)
+// console.log('allDates ', allDates)
+// console.log('availableSlots ', availableSlots)
+// console.log('availableDates ', availableDates)
+console.log('allSlotsByDay ', allSlotsByDay)
+// console.log('availableSlotsByDay ', availableSlotsByDay)
+// console.log('timeTaken ', timeTaken)
