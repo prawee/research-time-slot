@@ -2,15 +2,33 @@
 # yarn lockfile v1
 
 
+"@ssense/sscheduler@^1.3.2":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@ssense/sscheduler/-/sscheduler-1.3.2.tgz#7569c9b459cd6cfed9de0b40b46bdd77298c102e"
+  integrity sha512-SpQMkgzxr/ATmTNa5cgs4uy8WxJR/xOC634YGduLnc2yFvrmsG0TpSvdNFjPDLF/n8/Pgqg6QRYY2Z7WBz5F5A==
+  dependencies:
+    lodash "4.13.1"
+    moment "^2.17.1"
+
 fast-deep-equal@^3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
 
+lodash@4.13.1:
+  version "4.13.1"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.13.1.tgz#83e4b10913f48496d4d16fec4a560af2ee744b68"
+  integrity sha512-j/GRONYpkXt1aB1bQHzkq0Th7zhv/syoDVrzCDA3FDMntIin0b7TjXi62q9juDC+QfhRs9COr0LFW38vQSH9Tg==
+
 luxon@^2.4.0:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-2.5.2.tgz#17ed497f0277e72d58a4756d6a9abee4681457b6"
   integrity sha512-Yg7/RDp4nedqmLgyH0LwgGRvMEKVzKbUdkBYyCosbHgJ+kaOUx0qzSiSatVc3DFygnirTPYnMM2P5dg2uH1WvA==
+
+moment@^2.17.1:
+  version "2.29.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
+  integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
 
 slot-calculator@^2.2.0:
   version "2.2.0"
