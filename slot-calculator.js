@@ -4,13 +4,31 @@ const { getSlots } = require('slot-calculator')
 Settings.defaultZone = 'UTC'
 // const dateTimeRef = DateTime.local(2023, 9, 7, 8).setZone('Asia/Bangkok')
 // const dateTimeRef = DateTime.now().setZone('Asia/Bangkok')
-const dateTimeRef = DateTime.local(2023, 9, 7, 8)
+const dateTimeRef = DateTime.local(2023, 9, 8).setZone('Asia/Bangkok')
 
 const { allSlots, allDates, availableSlots, availableDates, allSlotsByDay, availableSlotsByDay, timeTaken } = getSlots({
     from: dateTimeRef.toISO(),
     to: dateTimeRef.plus({ days: 1 }).toISO(),
     // outputTimezone: "Asia/Bangkok",
     duration: 60,
+    unavailability: [
+        {
+            from: dateTimeRef.plus({ hour: 0 }).toISO(),
+            to: dateTimeRef.plus({ hour: 8 }).toISO()
+        },
+        {
+            from: dateTimeRef.plus({ hour: 12 }).toISO(),
+            to: dateTimeRef.plus({ hour: 13 }).toISO()
+        },
+        {
+            from: dateTimeRef.plus({ hour: 17 }).toISO(),
+            to: dateTimeRef.plus({ hour: 24 }).toISO()
+        },
+        {
+            from: DateTime.local(2023, 9, 8, 16).toISO(),
+            to: DateTime.local(2023, 9, 8, 17).toISO()
+        },
+    ]
 });
 
 // const { allSlots } = getSlots({
@@ -66,5 +84,5 @@ const { allSlots, allDates, availableSlots, availableDates, allSlotsByDay, avail
 // console.log('availableSlots ', availableSlots)
 // console.log('availableDates ', availableDates)
 console.log('allSlotsByDay ', allSlotsByDay)
-// console.log('availableSlotsByDay ', availableSlotsByDay)
+console.log('availableSlotsByDay ', availableSlotsByDay)
 // console.log('timeTaken ', timeTaken)
